@@ -21,3 +21,14 @@ This repository has been copied from https://github.com/baaivision/EVA
 ```
 
 This repository has been created as a personal archive for running EVA-CLIP-18B for feature extraction.
+
+</div>
+
+## Model Card
+
+### EVA-CLIP-18B
+| model name | image enc. init. ckpt | text enc. init. ckpt | total #params | training data  |  training batch size |  gpus for training | img. cls. avg. acc. | video cls. avg. acc. | retrieval MR | hf weight | pytorch weight |
+|:-----|:-----|:-----------|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+| `EVA-CLIP-18B` | `EVA_18B_psz14` | `EVA02_CLIP_E_psz14_plus_s9B` | 18.1B | Merged-2B+ | 108K | 360 A100(40GB) | **80.7** | **75.0** | **87.8**| [🤗 HF](https://huggingface.co/BAAI/EVA-CLIP-18B) | [PT](https://huggingface.co/BAAI/EVA-CLIP-18B/resolve/main/EVA_CLIP_18B_psz14_s6B.fp16.pt) (`36.7GB`) |
+
+</div>
