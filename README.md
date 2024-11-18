@@ -58,6 +58,8 @@ pip install -v --disable-pip-version-check --no-build-isolation --no-cache-dir .
 ```
 
 ## Usage
+Set the file path to the pretrained model, video files directory, output directory, and frame subsampling value in the [eva-run.py](https://github.com/AdrienneDeganutti/EVA-CLIP/blob/main/EVA-CLIP-18B/eva-run.py) file.
+
 To run the script directly in your terminal:
 ```bash
 python EVA-CLIP/EVA-CLIP-18B/eva-run.py
