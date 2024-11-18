@@ -1,0 +1,48 @@
+#!/bin/sh
+
+# Set the name of the job
+#SBATCH --job-name="eva-clip"
+
+# CPU core requirements
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+
+# CPU memory RAM requirements
+#SBATCH --mem=128G
+
+# GPU requirements
+#SBATCH --partition=a100
+#SBATCH --gpus=1
+
+# Maximum run time for the job (in days-hours:minutes:seconds)
+#SBATCH --time=XX-XX:XX:XX
+
+# Direct the output and errors of the job to a file (format: slurm.[NodeName].[JobID].out)
+#SBATCH -o slurm.%N.%j.out 
+#SBATCH -e slurm.%N.%j.err
+
+# Load the python interpreter
+module load miniconda3
+source /PATH/TO/MINICONDA/miniconda3/bin/activate
+conda activate shinji
+
+# Record start time
+start_time=$(date +"%Y-%m-%d %H:%M:%S")
+
+# Execute the Python script
+python eva-run.py
+
+# Record end time
+end_time=$(date +"%Y-%m-%d %H:%M:%S")
+
+# Calculate the duration
+duration=$(( $(date -d "$end_time" +%s) - $(date -d "$start_time" +%s) ))
+
+# Output the timing information
+echo "Start time: $start_time"
+echo "End time: $end_time"
+echo "Duration (seconds): $duration"
+
+# Get job information
+job_id=$SLURM_JOB_ID
+sacct --format=JobID,JobName,Partition,AllocCPUs,Elapsed,MaxRSS -j $job_id
