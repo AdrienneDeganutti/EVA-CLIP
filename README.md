@@ -68,7 +68,9 @@ cd EVA-CLIP/EVA-CLIP-18B/
 sbatch eva-clip.sub
 
 ```
+</div>
 
 ## Memory Requirements
 | CPU memory | 70.55 GB |
+|:-----|:-----|
 | GPU memory | 70.05 GB |
