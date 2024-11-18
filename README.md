@@ -35,7 +35,6 @@ This repository has been created as a personal archive for running EVA-CLIP-18B 
 
 ## Setup
 
-
 First, clone the repo and install required packages:
 ```bash
 conda create --name shinji python=3.8 -y
@@ -54,5 +53,17 @@ conda install -c conda-forge cudatoolkit-dev
 git clone https://github.com/NVIDIA/apex
 cd apex
 pip install -v --disable-pip-version-check --no-build-isolation --no-cache-dir ./
+
+```
+
+## Usage
+```bash
+python EVA-CLIP/EVA-CLIP-18B/eva-run.py
+
+```
+alternatively run a Slurm submit file:
+```bash
+cd EVA-CLIP/EVA-CLIP-18B/
+sbatch eva-clip.sub
 
 ```
