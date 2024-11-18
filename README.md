@@ -57,13 +57,18 @@ pip install -v --disable-pip-version-check --no-build-isolation --no-cache-dir .
 ```
 
 ## Usage
+To run the script directly in your terminal:
 ```bash
 python EVA-CLIP/EVA-CLIP-18B/eva-run.py
 
 ```
-alternatively run a Slurm submit file:
+Alternatively, to run a Slurm submit file:
 ```bash
 cd EVA-CLIP/EVA-CLIP-18B/
 sbatch eva-clip.sub
 
 ```
+
+## Memory Requirements
+| CPU memory | 70.55 GB |
+| GPU memory | 70.05 GB |
