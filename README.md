@@ -32,3 +32,26 @@ This repository has been created as a personal archive for running EVA-CLIP-18B 
 | `EVA-CLIP-18B` | `EVA_18B_psz14` | `EVA02_CLIP_E_psz14_plus_s9B` | 18.1B | Merged-2B+ | 108K | 360 A100(40GB) | **80.7** | **75.0** | **87.8**| [🤗 HF](https://huggingface.co/BAAI/EVA-CLIP-18B) | [PT](https://huggingface.co/BAAI/EVA-CLIP-18B/resolve/main/EVA_CLIP_18B_psz14_s6B.fp16.pt) (`36.7GB`) |
 
 </div>
+
+## Setup
+
+
+First, clone the repo and install required packages:
+```bash
+conda create --name shinji python=3.8 -y
+conda activate shinji
+
+git clone https://github.com/AdrienneDeganutti/EVA-CLIP.git
+cd EVA-CLIP/EVA-CLIP-18B
+
+pip install torch==2.0.1 torchvision==0.15.2 xformers==0.0.20 nvidia-cudnn-cu11==8.5.0.96 --extra-index-url https://download.pytorch.org/whl/cu118
+pip install -r requirements.txt
+
+pip install opencv-python
+pip install --upgrade deepspeed
+conda install -c conda-forge cudatoolkit-dev
+
+cd apex
+pip install -v --disable-pip-version-check --no-build-isolation --no-cache-dir ./
+
+```
