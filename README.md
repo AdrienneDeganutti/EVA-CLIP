@@ -47,6 +47,7 @@ pip install torch==2.0.1 torchvision==0.15.2 xformers==0.0.20 nvidia-cudnn-cu11=
 pip install -r requirements.txt
 
 pip install opencv-python
+pip install triton
 pip install --upgrade deepspeed
 conda install -c conda-forge cudatoolkit-dev
 
