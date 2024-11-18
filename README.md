@@ -75,3 +75,8 @@ sbatch eva-clip.sub
 | CPU memory | GPU memory |
 |:-----|:-----|
 | 70.55 GB | 70.05 GB |
+
+</div>
+
+## Acknowledgement
+EVA-CLIP is built using the awesome [OpenCLIP](https://github.com/mlfoundations/open_clip), [EVA-01](https://github.com/baaivision/EVA/tree/master/EVA-01), [CLIP](https://github.com/openai/CLIP), [timm](https://github.com/rwightman/pytorch-image-models), [transformers](https://github.com/huggingface/transformers), [DeepSpeed](https://github.com/microsoft/DeepSpeed), [CLIP-Benchmark](https://github.com/LAION-AI/CLIP_benchmark), [Apex](https://github.com/NVIDIA/apex) and [xFormer](https://github.com/facebookresearch/xformers).
