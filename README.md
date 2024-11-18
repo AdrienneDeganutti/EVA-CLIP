@@ -51,6 +51,7 @@ pip install opencv-python
 pip install --upgrade deepspeed
 conda install -c conda-forge cudatoolkit-dev
 
+git clone https://github.com/NVIDIA/apex
 cd apex
 pip install -v --disable-pip-version-check --no-build-isolation --no-cache-dir ./
 
