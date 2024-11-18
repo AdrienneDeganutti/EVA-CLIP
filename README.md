@@ -71,6 +71,6 @@ sbatch eva-clip.sub
 </div>
 
 ## Memory Requirements
-| CPU memory | 70.55 GB |
+| CPU memory | GPU memory |
 |:-----|:-----|
-| GPU memory | 70.05 GB |
+| 70.55 GB | 70.05 GB |
